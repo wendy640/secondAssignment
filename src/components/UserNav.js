@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react'
 import './Header.css'
 import { CSSTransition } from 'react-transition-group'
 import { Outlet, Link, useNavigate } from 'react-router-dom'
-import { Content } from './style'
-export default function Header2() {
+import { Content, Wrap } from './style'
+export default function Header() {
 	const navigate = useNavigate()
 	const [isNavVisible, setNavVisibility] = useState(false)
 	const [isSmallScreen, setIsSmallScreen] = useState(false)
@@ -33,7 +33,7 @@ export default function Header2() {
 
 	return (
 		<>
-			<Content>
+			<Wrap>
 				<header className="Header">
 					<img
 						src={require('../assets/logo.png')}
@@ -64,7 +64,7 @@ export default function Header2() {
 					</button>
 					<Outlet />
 				</header>
-			</Content>
+			</Wrap>
 		</>
 	)
 }

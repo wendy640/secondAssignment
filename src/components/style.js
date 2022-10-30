@@ -83,9 +83,12 @@ export const profile = styled.div`
   width:50px;
   height:50px;
 `
+
 export const Wrap = styled.div`
 
-	background-image: ${(props) =>
-		`url(${require(`#fff${props.backgroundImage}`).default})`};
+	background-color: #fff;
 	
+	@media (max-width: 700px) {
+		height: 75vh;
+	}
 `

@@ -1,10 +1,7 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import axios from "axios";
 import Pagination from "react-js-pagination";
-import { Wrap } from "./style";
 import "./pagination.css";
-import Header from "./Navbar";
 import Header2 from "./UserNav";
 
 class Users extends Component {
@@ -35,34 +32,28 @@ class Users extends Component {
     const allData = this.state.data.map((item) => {
       return (
 				<>
-				
-					<Header2/>
-						<Header user={true} />
-						<div key={item.id} class="card">
-							<img
-								src={item.picture.large}
-								alt="Avatar"
-								style={{ width: 250 }}
-							/>
-							<div class="container">
-								<h4>
-									<b>{item.name.title}</b>
-								</h4>
-								<h4>
-									<b>
-										{item.name.first} {item.name.last}
-									</b>
-								</h4>
-								<p>{item.gender}</p>
-							</div>
+					<Header2 />
+
+					<div key={item.id} class="card">
+						<img src={item.picture.large} alt="Avatar" style={{ width: 250 }} />
+						<div class="container">
+							<h4>
+								<b>{item.name.title}</b>
+							</h4>
+							<h4>
+								<b>
+									{item.name.first} {item.name.last}
+								</b>
+							</h4>
+							<p>{item.gender}</p>
+							<p>{item.email}</p>
 						</div>
-					</Wrap>
+					</div>
 				</>
 			)
     });
     return (
-			<div className="App">
-				<p>React pagination test</p>
+			<div className="App">	
 				<ul>{allData}</ul>
 				<Pagination
 					activePage={this.state.activePage}

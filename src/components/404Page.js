@@ -1,6 +1,12 @@
 import React from 'react'
 import msg from "../assets/404.png"
+import { useNavigate } from 'react-router-dom'
+
+
+
+  
 const NoPage = () => {
+  const navigate = useNavigate()
   return (
 		<>
 			<div
@@ -14,10 +20,18 @@ const NoPage = () => {
 				<img src={msg} alt="404" />
 				<h3
 					style={{
-		display:'flex',justifyContent:'center',color: '#333333',fontSize:27
+						display: 'flex',
+						justifyContent: 'center',
+						color: '#333333',
+						fontSize: 27
 					}}
 				>
-				Ooops!!	Page not found
+					Ooops!! Page not found
+					<br>
+						<button onClick={() => navigate('/')} className="primary">
+							Home
+						</button>
+					</br>
 				</h3>
 			</div>
 		</>

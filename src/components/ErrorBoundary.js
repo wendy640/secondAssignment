@@ -1,5 +1,6 @@
 import React,{ Component } from 'react'
 import wrg from "../assets/error.png"
+import { useNavigate } from 'react-router-dom'
 class  ErrorBoundary extends Component {
 
   constructor(props){
@@ -13,11 +14,11 @@ class  ErrorBoundary extends Component {
   return {hasError: true}
 }
 componentDidCatch(error,info){
-console.log(error)
-console.log(info)
+// console.log(error)
+// console.log(info)
 }
 render(){
-
+ 
    if (this.state.hasError) {
      return (
 				<>
@@ -39,6 +40,9 @@ render(){
 							}}
 						>
 							Ooops!! Something went wrong
+							<br>
+						
+							</br>
 						</h3>
 					</div>
 				</>
