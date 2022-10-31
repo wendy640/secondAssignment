@@ -1,6 +1,6 @@
 import React,{ Component } from 'react'
 import wrg from "../assets/error.png"
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 class  ErrorBoundary extends Component {
 
   constructor(props){
@@ -41,7 +41,7 @@ render(){
 						>
 							Ooops!! Something went wrong
 							<br>
-						
+					<Link to='/'><button>Go Home</button></Link>
 							</br>
 						</h3>
 					</div>

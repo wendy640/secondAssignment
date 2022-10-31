@@ -7,13 +7,17 @@ import Header2 from "./UserNav";
 class Users extends Component {
   state = {
     data: [],
-    activePage: 1
+    activePage: 1,
+		
   };
 
   componentDidMount() {
+		  this.setState({ loading: true })
     axios.get("https://randomuser.me/api/?_page=1&_limit=10").then((res) => {
       this.setState({
-        data: res.data.results
+        data: res.data.results,
+			
+			
       });
     });
   }
@@ -75,3 +79,4 @@ class Users extends Component {
 }
 
 export default Users
+
