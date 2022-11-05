@@ -40,9 +40,7 @@ render(){
 							}}
 						>
 							Ooops!! Something went wrong
-							<br>
-					<Link to='/'><button>Go Home</button></Link>
-							</br>
+						
 						</h3>
 					</div>
 				</>

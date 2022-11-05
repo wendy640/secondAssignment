@@ -27,11 +27,7 @@ const NoPage = () => {
 					}}
 				>
 					Ooops!! Page not found
-					<br>
-						<button onClick={() => navigate('/')} className="primary">
-							Home
-						</button>
-					</br>
+				
 				</h3>
 			</div>
 		</>
